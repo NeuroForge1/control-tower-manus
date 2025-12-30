@@ -12,7 +12,7 @@ export class ManusClient {
     const response = await fetch(`${MANUS_API_BASE}/tasks`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.apiKey}`,
+        'API_KEY': this.apiKey,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -34,7 +34,7 @@ export class ManusClient {
     const response = await fetch(`${MANUS_API_BASE}/webhooks`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.apiKey}`,
+        'API_KEY': this.apiKey,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -56,7 +56,7 @@ export class ManusClient {
     const response = await fetch(`${MANUS_API_BASE}/tasks/${taskId}`, {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${this.apiKey}`
+        'API_KEY': this.apiKey
       }
     });
 

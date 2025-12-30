@@ -1,7 +1,7 @@
 // Cliente para interactuar con Manus API
 // Documentación: https://open.manus.im/docs/api-reference
 
-const MANUS_API_BASE = 'https://open.manus.im/v1';
+const MANUS_API_BASE = 'https://api.manus.ai/v1';
 
 export class ManusClient {
   constructor(apiKey) {
@@ -12,7 +12,7 @@ export class ManusClient {
     const response = await fetch(`${MANUS_API_BASE}/tasks`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.apiKey}`,
+        'API_KEY': this.apiKey,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -34,7 +34,7 @@ export class ManusClient {
     const response = await fetch(`${MANUS_API_BASE}/webhooks`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.apiKey}`,
+        'API_KEY': this.apiKey,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -56,7 +56,7 @@ export class ManusClient {
     const response = await fetch(`${MANUS_API_BASE}/tasks/${taskId}`, {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${this.apiKey}`
+        'API_KEY': this.apiKey
       }
     });
 

@@ -1,0 +1,18 @@
+VERCEL BYPASS TOKEN
+===================
+
+Token: G2b8sBLJ5w9snmA4b80RInV2Jv8f9ChU
+Note: Control Tower API access
+Created: 2025-12-30
+
+Usage:
+------
+Add this header to bypass Vercel Authentication:
+x-vercel-protection-bypass: G2b8sBLJ5w9snmA4b80RInV2Jv8f9ChU
+
+Example curl:
+curl -X POST https://control-tower-manus.vercel.app/api/cycle/start.js \
+  -H "x-vercel-protection-bypass: G2b8sBLJ5w9snmA4b80RInV2Jv8f9ChU" \
+  -H "Authorization: Bearer 999048e3214bf276b6d220c39cc452927025f40aa06a0d2e4cace7f302601298" \
+  -H "Content-Type: application/json" \
+  -d '{"mode": "NORMAL", "topic": "Test topic"}'

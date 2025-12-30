@@ -1,0 +1,26 @@
+{
+  "name": "control-tower-manus",
+  "version": "0.1.0",
+  "description": "Control Tower para Manus API - Orquestador de ciclos de contenido",
+  "main": "api/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "test": "node --test"
+  },
+  "keywords": [
+    "manus",
+    "orchestrator",
+    "control-tower",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
